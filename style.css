@@ -1,0 +1,35 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.spinner {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(45deg, deeppink, deepskyblue);
+    animation: animate .5s linear infinite;
+}
+
+.spinner::before {
+    content: " ";
+    height: 120px;
+    width: 120px;
+    background-color: #111827;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    to {
+        transform: rotate(360deg);
+    }
+}
